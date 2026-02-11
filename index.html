@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style/style.css" />
+        <link rel="icon" type="image/png" href="./assets/favicon.png" />
+        <title>Aaeri</title>
+    </head>
+
+    <style>
+        @keyframes squiggly-anim {
+            0% {
+                -webkit-filter: url("#squiggly-0");
+                filter: url("#squiggly-0");
+            }
+            25% {
+                -webkit-filter: url("#squiggly-1");
+                filter: url("#squiggly-1");
+            }
+            50% {
+                -webkit-filter: url("#squiggly-2");
+                filter: url("#squiggly-2");
+            }
+            75% {
+                -webkit-filter: url("#squiggly-3");
+                filter: url("#squiggly-3");
+            }
+            100% {
+                -webkit-filter: url("#squiggly-4");
+                filter: url("#squiggly-4");
+            }
+        }
+
+        #text {
+            animation: squiggly-anim 0.5s linear infinite;
+        }
+
+        .svg-container {
+            width: 0;
+            height: 0;
+            overflow: hidden;
+        }
+    </style>
+
+    <span class="svg-container">
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            version="1.1"
+            width="0"
+            height="0"
+        >
+            <defs>
+                <filter id="squiggly-0">
+                    <feTurbulence
+                        id="turbulence"
+                        baseFrequency="0.02"
+                        numOctaves="3"
+                        result="noise"
+                        seed="0"
+                    />
+                    <feDisplacementMap
+                        id="displacement"
+                        in="SourceGraphic"
+                        in2="noise"
+                        scale="6"
+                    />
+                </filter>
+                <filter id="squiggly-1">
+                    <feTurbulence
+                        id="turbulence"
+                        baseFrequency="0.02"
+                        numOctaves="3"
+                        result="noise"
+                        seed="1"
+                    />
+                    <feDisplacementMap
+                        in="SourceGraphic"
+                        in2="noise"
+                        scale="8"
+                    />
+                </filter>
+                <filter id="squiggly-2">
+                    <feTurbulence
+                        id="turbulence"
+                        baseFrequency="0.02"
+                        numOctaves="3"
+                        result="noise"
+                        seed="2"
+                    />
+                    <feDisplacementMap
+                        in="SourceGraphic"
+                        in2="noise"
+                        scale="6"
+                    />
+                </filter>
+                <filter id="squiggly-3">
+                    <feTurbulence
+                        id="turbulence"
+                        baseFrequency="0.02"
+                        numOctaves="3"
+                        result="noise"
+                        seed="3"
+                    />
+                    <feDisplacementMap
+                        in="SourceGraphic"
+                        in2="noise"
+                        scale="8"
+                    />
+                </filter>
+                <filter id="squiggly-4">
+                    <feTurbulence
+                        id="turbulence"
+                        baseFrequency="0.02"
+                        numOctaves="3"
+                        result="noise"
+                        seed="4"
+                    />
+                    <feDisplacementMap
+                        in="SourceGraphic"
+                        in2="noise"
+                        scale="6"
+                    />
+                </filter>
+            </defs>
+        </svg>
+    </span>
+
+    <p id="text">
+        These are my feelings. My thoughts. My memories. I will take them back.
+        I should never have lost them.
+    </p>
+
+    <body>
+        <header></header>
+        <div class="container">
+            <div class="col1">
+                <div class="sub-container">
+                    <h3>Navigation</h3>
+                    <nav class="page-list">
+                        <ul>
+                            <li>
+                                <a href="/"
+                                    ><img
+                                        class="bullet-point"
+                                        src="./assets/icons/pill.gif"
+                                        alt=""
+                                    />Home</a
+                                >
+                            </li>
+                            <li>
+                                <a href="/"
+                                    ><img
+                                        class="bullet-point"
+                                        src="./assets/icons/pill.gif"
+                                        alt=""
+                                    />About</a
+                                >
+                            </li>
+                            <li>
+                                <a href="/"
+                                    ><img
+                                        class="bullet-point"
+                                        src="./assets/icons/pill.gif"
+                                        alt=""
+                                    />Microblog</a
+                                >
+                            </li>
+                            <li>
+                                <a href="/"
+                                    ><img
+                                        class="bullet-point"
+                                        src="./assets/icons/pill.gif"
+                                        alt=""
+                                    />Medialog</a
+                                >
+                            </li>
+                            <li>
+                                <a href="/"
+                                    ><img
+                                        class="bullet-point"
+                                        src="./assets/icons/pill.gif"
+                                        alt=""
+                                    />Arts</a
+                                >
+                            </li>
+                            <li>
+                                <a href="/"
+                                    ><img
+                                        class="bullet-point"
+                                        src="./assets/icons/pill.gif"
+                                        alt=""
+                                    />Photos</a
+                                >
+                            </li>
+                            <li>
+                                <a href="https://aaeri.atabook.org/"
+                                    ><img
+                                        class="bullet-point"
+                                        src="./assets/icons/pill.gif"
+                                        alt=""
+                                    />Guestbook</a
+                                >
+                            </li>
+                            <li>
+                                <a href="/"
+                                    ><img
+                                        class="bullet-point"
+                                        src="./assets/icons/pill.gif"
+                                        alt=""
+                                    />Links</a
+                                >
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="sub-container">
+                    <h3>Updates</h3>
+                    <ul class="updates">
+                        <li>
+                            <p>Primeira versão do sitezin :DDD</p>
+                            <small>11/02/2025</small>
+                        </li>
+                    </ul>
+                </div>
+                <marquee class="stamps" behavior="alternate">
+                    <img src="./assets/stamps/animesketch.gif" alt="" />
+                    <img src="./assets/stamps/emu.png" alt="" />
+                    <img src="./assets/stamps/miku.png" alt="" />
+                    <img src="./assets/stamps/konata.gif" alt="" />
+                    <img src="./assets/stamps/rei.png" alt="" />
+                    <img src="./assets/stamps/asuka.webp" alt="" />
+                    <img src="./assets/stamps/miku2.png" alt="" />
+                </marquee>
+            </div>
+
+            <div class="col2">
+                <section class="welcome-text">
+                    Oiii! Bem-vindo ao meu espaço :))<br /><br />
+                    Fica a vontade pra explorar um pouquinho dos meus interesses
+                    e interagir também.
+                    <br /><br />Espero que goste da visita! ＼(￣▽￣)／
+                    <img src="./assets/deco.png" alt="" />
+                </section>
+                <div class="under-cunstruction">
+                    <div>
+                        <img
+                            src="./assets/images/under-construction.png"
+                            width="64px"
+                            alt=""
+                        />
+                        <p>Site em contrução B^)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col3">
+                <div class="sub-container microblog">
+                    <h3>Microblog</h3>
+                    <iframe
+                        src="https://lunebox.malune.net/widget/Ari?font-family=monospace&color=%23001534&hideUsername=1&lang=pt&marquee=1"
+                        frameborder="0"
+                        width="100%"
+                        height="40"
+                        title="LuneBox Status"
+                    ></iframe>
+                </div>
+                <!--<iframe
+                    width="100%"
+                    height="120"
+                    src="https://www.youtube.com/embed/ldsil7KfaLE?si=EMvhrrJmTAwZmCKT"
+                    title="YouTube video player"
+                    frameborder="2"
+                    allow="
+                        accelerometer;
+                        autoplay;
+                        clipboard-write;
+                        encrypted-media;
+                        gyroscope;
+                        picture-in-picture;
+                        web-share;
+                    "
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                ></iframe>-->
+                <div class="sub-container">
+                    <h3>Chat</h3>
+                    <iframe
+                        class="chat"
+                        src="https://www3.cbox.ws/box/?boxid=3552251&boxtag=2ophzh"
+                        width="100%"
+                        height="240"
+                        allowtransparency="yes"
+                        allow="autoplay"
+                        frameborder="0"
+                        marginheight="0"
+                        marginwidth="0"
+                        scrolling="auto"
+                    ></iframe>
+                </div>
+                <img
+                    class="image-day"
+                    src="https://i.pinimg.com/1200x/fc/bc/b8/fcbcb8135a6168641a7cbef44e130da1.jpg"
+                    alt=""
+                />
+            </div>
+        </div>
+        <footer>Aaeri @ 2025</footer>
+        <img class="deco" src="./assets/migu.png" />
+    </body>
+</html>

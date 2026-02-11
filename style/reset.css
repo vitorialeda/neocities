@@ -1,0 +1,48 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    color: var(--text);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    font-family: "Jersey 15", sans-serif;
+    margin-top: 32px;
+    display: grid;
+    justify-self: center;
+    max-width: 900px;
+    background: url(../assets/tile.jpg);
+    color: var(--text);
+    position: relative;
+}
+
+header {
+    width: 100%;
+    height: 150px;
+    background: url(https://i.pinimg.com/1200x/25/64/fe/2564febdd4e02d0d1c4a7af4374d7c80.jpg);
+    background-size: cover;
+    text-align: end;
+}
+
+small {
+    color: var(--text-muted);
+}
+
+footer {
+    width: 100%;
+    margin-top: 16px;
+    text-align: center;
+    color: var(--text-muted);
+}

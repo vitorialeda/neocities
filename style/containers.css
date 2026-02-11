@@ -1,0 +1,43 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    max-width: 100%;
+    gap: 8px;
+    padding: 12px;
+    margin: 0 auto;
+    background: #fff;
+}
+
+.sub-container {
+    overflow: clip;
+    border-radius: 8px;
+    border: 2px solid oklch(0.7 0.0493 229.12);
+}
+
+.sub-container h3 {
+    font-family: "Jersey 25", sans-serif;
+    font-size: 0.75Srem;
+    text-shadow:
+        -1px 0 var(--text),
+        0 1px var(--text),
+        1px 0 var(--text),
+        0 -1px var(--text);
+    color: #fff;
+    padding: 6px 12px;
+    background: var(--bg-color);
+    box-shadow:
+        inset 13px 0px 6px -10px oklch(0.32 0.0715 260.12/ 56%),
+        inset -13px 0px 6px -10px oklch(0.32 0.0715 260.12/ 56%),
+        inset 0px 13px 6px -10px oklch(0.86 0.0715 233.12),
+        inset 0px -13px 6px -10px oklch(0.32 0.0715 260.12/ 36%);
+    -webkit-fil: drop-shadow(0px 0px 3px #424242);
+}
+
+.sub-container > *:not(:first-child) {
+    padding-inline: 12px;
+    padding-block: 12px;
+}
+
+.sub-container .chat {
+    padding: 0;
+}
