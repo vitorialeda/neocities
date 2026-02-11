@@ -91,11 +91,6 @@
     gap: 12px;
 }
 
-.col3 .microblog {
-    height: 100px;
-    overflow-y: scroll;
-}
-
 .col3 .image-day {
     width: 100%;
 }
