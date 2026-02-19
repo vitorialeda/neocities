@@ -1,0 +1,81 @@
+/*------- MUSIC PLAYER -------*/
+#glenplayer02 {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+div.ex2 {
+  display: flex;
+  align-items: center;
+  background: white;
+  opacity: 0.75;
+  margin: auto;
+  border: 3px double #000;
+  padding: 4px 8px;
+  gap: 2px;
+  max-width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.music-controls {
+  user-select: none;
+  -webkit-user-select: none;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  flex-shrink: 0;
+}
+
+.music-btn {
+  cursor: pointer;
+  color: #000;
+  font-size: 8px;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+
+.music-btn:hover {
+  opacity: 1;
+}
+
+.music-btn.play-pause-btn {
+  font-size: 11px;
+  opacity: 1;
+}
+
+.playy,
+.pausee {
+  color: #000;
+}
+
+.pausee {
+  display: none;
+}
+
+.sonata {
+  margin-left: 6px;
+  color: #222;
+  flex-shrink: 0;
+}
+
+.labeltext {
+  margin-left: 6px;
+  font-family: courier new;
+  font-size: 9px;
+  color: #222;
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.track-info {
+  font-family: courier new;
+  font-size: 9px;
+  color: #555;
+  margin-left: 4px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
