@@ -1,123 +1,42 @@
-// this script is provided by https://www.javascriptfreecode.com
-// coded by: Kerixa Inc.
-
-// Begin
-monthnames = new Array(
-  "January",
-  "Februrary",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "Decemeber",
-);
-
-var linkcount = 0;
-
-function addlink(month, day, href) {
-  var entry = new Array(3);
-  entry[0] = month;
-  entry[1] = day;
-  entry[2] = href;
-  this[linkcount++] = entry;
-}
-
-Array.prototype.addlink = addlink;
-
-linkdays = new Array();
-monthdays = new Array(12);
-monthdays[0] = 31;
-monthdays[1] = 28;
-monthdays[2] = 31;
-monthdays[3] = 30;
-monthdays[4] = 31;
-monthdays[5] = 30;
-monthdays[6] = 31;
-monthdays[7] = 31;
-monthdays[8] = 30;
-monthdays[9] = 31;
-monthdays[10] = 30;
-monthdays[11] = 31;
-
-todayDate = new Date();
-thisday = todayDate.getDay();
-thismonth = todayDate.getMonth();
-thisdate = todayDate.getDate();
-thisyear = todayDate.getYear();
-
-thisyear = thisyear % 100;
-thisyear = thisyear < 50 ? 2000 + thisyear : 1900 + thisyear;
-
-if ((thisyear % 4 == 0 && !(thisyear % 100 == 0)) || thisyear % 400 == 0) {
-  monthdays[1]++;
-}
-
-startspaces = thisdate;
-while (startspaces > 7) startspaces -= 7;
-startspaces = thisday - startspaces + 1;
-if (startspaces < 0) startspaces += 7;
-
-document.write("<table border=2 bgcolor=white bordercolor=black>");
-document.write("<tr><td colspan=7 align=center><strong>");
-document.write(monthnames[thismonth] + " " + thisyear);
-document.write("</strong></td></tr>");
-
-document.write("<tr>");
-document.write("<td align=center>Su</td>");
-document.write("<td align=center>M</td>");
-document.write("<td align=center>Tu</td>");
-document.write("<td align=center>W</td>");
-document.write("<td align=center>Th</td>");
-document.write("<td align=center>F</td>");
-document.write("<td align=center>Sa</td>");
-document.write("</tr>");
-
-document.write("<tr>");
-for (s = 0; s < startspaces; s++) {
-  document.write("<td> </td>");
-}
-
-count = 1;
-while (count <= monthdays[thismonth]) {
-  for (b = startspaces; b < 7; b++) {
-    linktrue = false;
-    document.write("<td>");
-
-    for (c = 0; c < linkdays.length; c++) {
-      if (linkdays[c] != null) {
-        if (linkdays[c][0] == thismonth + 1 && linkdays[c][1] == count) {
-          document.write('<a href="' + linkdays[c][2] + '">');
-          linktrue = true;
-        }
-      }
-    }
-
-    if (count == thisdate) {
-      document.write("<strong style='color:red'>");
-    }
-
-    if (count <= monthdays[thismonth]) {
-      document.write(count);
-    } else {
-      document.write(" ");
-    }
-
-    if (count == thisdate) {
-      document.write("</strong>");
-    }
-
-    if (linktrue) document.write("</a>");
-    document.write("</td>");
-    count++;
+let calendarDate = new Date();
+function renderCalendar() {
+  const year = calendarDate.getFullYear();
+  const month = calendarDate.getMonth();
+  const meses = [
+    "Janeiro",
+    "Fevereiro",
+    "Março",
+    "Abril",
+    "Maio",
+    "Junho",
+    "Julho",
+    "Agosto",
+    "Setembro",
+    "Outubro",
+    "Novembro",
+    "Dezembro",
+  ];
+  document.getElementById("calendar-month-year").textContent =
+    meses[month] + " " + year;
+  const firstDay = new Date(year, month, 1).getDay();
+  const daysInMonth = new Date(year, month + 1, 0).getDate();
+  const today = new Date();
+  const container = document.getElementById("calendar-days");
+  container.innerHTML = "";
+  for (let i = 0; i < firstDay; i++) {
+    container.innerHTML += "<span></span>";
   }
-  document.write("</tr><tr>");
-  startspaces = 0;
+  for (let d = 1; d <= daysInMonth; d++) {
+    const isToday =
+      d === today.getDate() &&
+      month === today.getMonth() &&
+      year === today.getFullYear();
+    container.innerHTML +=
+      '<span class="' + (isToday ? "today" : "") + '">' + d + "</span>";
+  }
 }
-
-document.write("</tr></table>");
-// End
+function changeMonth(dir) {
+  calendarDate.setMonth(calendarDate.getMonth() + dir);
+  renderCalendar();
+}
+renderCalendar();
