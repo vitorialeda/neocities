@@ -1,124 +1,44 @@
 @import url("https://fonts.googleapis.com/css2?family=Jersey+15&family=Jersey+25&display=swap");
 @import url("reset.css");
 @import url("containers.css");
-@font-face {
-    font-family: pixel;
-    src: url(https://dl.dropbox.com/s/0aeetq41meln05o/Pixeloid.ttf);
-}
+@import url("music_player.css");
+@import url("squiggly-animation.css");
+@import url("calendar.css");
+@import url("gallery.css");
 
 :root {
-    --bg-color: oklch(0.7 0.0715 229.12);
-    --bg-alt: oklch(0.8923 0.0419 229.12);
+  --bg-color: oklch(0.7 0.07 229);
+  --bg-alt: oklch(0.9 0.04 229);
 
-    --text: oklch(0.2 0.0691 256.65);
-    --text-muted: oklch(0.4659 0.0197 233.35);
-    --text-alt: oklch(0.9276 0.0222 229.12);
-}
+  --border: oklch(0.7 0.05 229);
 
-.page-list ul {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-}
-
-.welcome-text {
-    position: relative;
-    font-size: 20px;
-    color: var(--text-muted);
-}
-
-.welcome-text img {
-    width: 84px;
-    position: absolute;
-    top: -40px;
-    right: -40px;
-    animation: balancar 0.5s infinite alternate steps(2);
-    transform-origin: center;
-}
-
-@keyframes balancar {
-    from {
-        transform: rotate(-5deg);
-    }
-    to {
-        transform: rotate(5deg);
-    }
+  --text: oklch(0.2 0.07 256.65);
+  --text-muted: oklch(0.5 0.02 233);
+  --text-alt: oklch(0.93 0.02 229);
 }
 
 .col1,
 .col2,
 .col3 {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.col1 .updates {
-    height: 100px;
-    overflow-y: scroll;
-}
-
-.col1 .updates li {
-    padding-bottom: 2px;
-    border-bottom: 1px dashed var(--text-muted);
-}
-
-.col2 .welcome-text {
-    padding: 12px;
-    border-width: 8px;
-    border-style: solid;
-    border-image: url("https://dl.dropbox.com/s/v8iy6a8feyq041p/blue%20ver.png")
-        8 fill round;
-}
-
-.col2 .sub-container {
-    font-size: 12px;
-    font-family: "Jersey 15";
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .col2 .row2 {
-    display: flex;
-    gap: 12px;
+  display: flex;
+  gap: 12px;
 }
 
 .col2 .under-cunstruction {
-    display: grid;
-    justify-items: center;
-    text-align: center;
-    align-items: center;
-    height: 100%;
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  align-items: center;
+  height: 100%;
 }
 
 .col3 {
-    display: grid;
-    gap: 12px;
-}
-
-.col3 .image-day {
-    width: 100%;
-}
-
-.bullet-point {
-    width: 12px;
-    margin-right: 4px;
-}
-
-.deco {
-    position: absolute;
-    bottom: -5px;
-    right: -70px;
-}
-
-.tooltip-deco {
-    position: absolute !important;
-    width: 60px;
-    top: -60px;
-    right: -80px;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.5s linear;
-}
-
-.deco:hover .tooltip-deco {
-    opacity: 1;
+  display: grid;
+  gap: 12px;
 }
