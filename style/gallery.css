@@ -1,0 +1,100 @@
+/* ---- GALERIA DE ARTE ---- */
+.gallery-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.gallery-page h1 {
+  font-family: "Jersey 25", sans-serif;
+  font-size: 1.6rem;
+  color: var(--text);
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 12px;
+}
+
+.gallery-item {
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--bg-alt);
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+.gallery-item:hover {
+  transform: scale(1.02);
+}
+
+.gallery-item img {
+  width: 100%;
+  display: block;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.gallery-item .art-desc {
+  padding: 6px 10px;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  border-top: 1px dashed var(--border);
+}
+
+/* ---- LIGHTBOX ---- */
+.lightbox-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 999;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.lightbox-overlay.active {
+  display: flex;
+}
+
+.lightbox-overlay img {
+  max-width: 90vw;
+  max-height: 75vh;
+  border-radius: 4px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-info {
+  text-align: center;
+  max-width: 600px;
+  cursor: default;
+}
+
+.lightbox-overlay .lightbox-desc {
+  color: #ccc;
+  font-size: 0.85rem;
+}
+
+.lightbox-overlay .lightbox-detail {
+  color: #999;
+  font-size: 0.8rem;
+  margin-top: 6px;
+  font-style: italic;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 16px;
+  right: 24px;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 1000;
+}
