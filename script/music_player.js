@@ -2,51 +2,51 @@ const MusicPlayer = (() => {
   const playlist = [
     {
       title: "沙耶の唄 - ITO Kanako",
-      src: "https://www.dropbox.com/scl/fi/zuohkxq02id498bl6n0n3/ITO-Kanako.mp3?rlkey=l85jen8rh9ns3qlde2kp5v8xo&st=jl3smvkp&raw=1",
+      src: "https://file.garden/aZzM6RSvfEnxBY-o/Songs/%E6%B2%99%E8%80%B6%E3%81%AE%E5%94%84%20-%20ITO%20Kanako.mp3",
     },
     {
       title: "ガラスのくつ - ITO Kanako",
-      src: "https://www.dropbox.com/scl/fi/k4k1bv079y5uaaokhrdxz/ITO-Kanako.mp3?rlkey=v1wrznoytnrb8vwkuno62v6om&st=akxaeq5i&raw=1",
+      src: "https://file.garden/aZzM6RSvfEnxBY-o/Songs/%E3%82%AC%E3%83%A9%E3%82%B9%E3%81%AE%E3%81%8F%E3%81%A4%20-%20ITO%20Kanako.mp3",
     },
     {
       title: "Moonlight Ginga - SoutaiseiRiron",
-      src: "https://www.dropbox.com/scl/fi/ostaeyzsccpq8vhcu2ovw/SoutaiseiRiron-Moonlight-Ginga.mp3?rlkey=uiroa9hbhv3r1ul1qkspi0wjw&st=x5kklvdv&raw=1",
+      src: "https://file.garden/aZzM6RSvfEnxBY-o/Songs/SoutaiseiRiron%20-%20Moonlight%20Ginga.mp3",
     },
     {
       title: "Super Shooter - Gantz",
-      src: "https://www.dropbox.com/scl/fi/d19eksmllykmp5pa3rekz/Super-Shooter-Gantz.mp3?rlkey=dn4psbe6cfaxk5ve7621donik&st=es7dirkh&raw=1",
+      src: "https://file.garden/aZzM6RSvfEnxBY-o/Songs/Super%20Shooter%20-%20Gantz.mp3",
     },
     {
       title: "~comment te dire adieu~ sourire de aigu",
-      src: "https://www.dropbox.com/scl/fi/ppv2ov6sohsbu07sjcaak/comment-te-dire-adieu-sourire-de-aigu.mp3?rlkey=pae2iv63g9rfe3ax5nes0oxb2&st=64cmhz0j&raw=1",
+      src: "https://file.garden/aZzM6RSvfEnxBY-o/Songs/~comment%20te%20dire%20adieu~%20sourire%20de%20aigu.mp3",
     },
     {
       title: "~comment te dire adieu~ soiree des revoires",
-      src: "https://www.dropbox.com/scl/fi/tnnz2bot13aq2y9a0dfnc/comment-te-dire-adieu-soiree-des-au-revoires.mp3?rlkey=qh0xiy0d7obugqf4r92ahi2rg&st=fs5hitsf&raw=1",
+      src: "https://file.garden/aZzM6RSvfEnxBY-o/Songs/~comment%20te%20dire%20adieu~%20soiree%20des%20au%20revoires.mp3",
     },
     {
       title: "~comment te dire adieu~ l'ange a contre jour",
-      src: "https://www.dropbox.com/scl/fi/bgm445p3ra51193dmogrm/comment-te-dire-adieu-l-ange-a-contre-jour.mp3?rlkey=dodtch8ye3590g5xuz1fx65r1&st=ed530ujd&raw=1",
+      src: "https://file.garden/aZzM6RSvfEnxBY-o/Songs/~comment%20te%20dire%20adieu~%20l'ange%20a%20contre%20jour.mp3",
     },
     {
       title: "~comment te dire adieu~ immobile et tourbillon",
-      src: "https://www.dropbox.com/scl/fi/s4tq1pbhh48nlk2blfdo4/comment-te-dire-adieu-immobile-et-tourbillon.mp3?rlkey=76k60ybj8gpk8eux7hfnli57t&st=3jywumf4&raw=1",
+      src: "https://file.garden/aZzM6RSvfEnxBY-o/Songs/~comment%20te%20dire%20adieu~%20immobile%20et%20tourbillon.mp3",
     },
     {
       title: "~comment te dire adieu~ reve en cage",
-      src: "https://www.dropbox.com/scl/fi/fy5inowdw8vu8ehewumbg/comment-te-dire-adieu-reve-en-cage.mp3?rlkey=hukgfyxg5qbdecdvv0bdm4mij&st=56kpve7d&raw=1",
+      src: "https://file.garden/aZzM6RSvfEnxBY-o/Songs/~comment%20te%20dire%20adieu~%20reve%20en%20cage.mp3",
     },
     {
       title: "SABBATH - Yoshihiro Kawagoe",
-      src: "https://www.dropbox.com/scl/fi/bcahrr2qzydke12j4g6wz/SABBATH-Yoshihiro-Kawagoe.mp3?rlkey=afo15o4zqg50kre07dep322la&st=pognk0je&raw-1",
+      src: "https://file.garden/aZzM6RSvfEnxBY-o/Songs/SABBATH%20-%20Yoshihiro%20Kawagoe.mp3",
     },
     {
       title: "SONG OF SAYA I - Toshimichi Isoe",
-      src: "https://www.dropbox.com/scl/fi/4iny9j2bsrj5xtwnidqfx/SONG-OF-SAYA-I-Toshimichi-Isoe.mp3?rlkey=qrdi2pigftz6xqmz8mfbedc4e&st=8a8dsbeq&raw=1",
+      src: "https://file.garden/aZzM6RSvfEnxBY-o/Songs/SONG%20OF%20SAYA%20I%20%C2%B7%20Toshimichi%20Isoe%20.mp3",
     },
     {
       title: "SUNSET - Shintaro Jinbo",
-      src: "https://www.dropbox.com/scl/fi/761xaz4wo3u93b20gqh56/SUNSET-Shintaro-Jinbo.mp3?rlkey=3y8ettwfglcp0v1pk9tk1cs0b&st=e0byqgal&raw=1",
+      src: "https://file.garden/aZzM6RSvfEnxBY-o/Songs/SUNSET%20%C2%B7%20Shintaro%20Jinbo.mp3",
     },
   ];
 
