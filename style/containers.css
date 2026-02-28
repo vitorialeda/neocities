@@ -153,3 +153,13 @@
 .at-the-moment {
     padding: 6px;
 }
+
+.disabled {
+    color: var(--text-muted);
+    text-decoration: line-through;
+    cursor: default;
+}
+
+.disabled:hover {
+    text-decoration: line-through;
+}
