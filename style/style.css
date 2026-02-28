@@ -7,38 +7,42 @@
 @import url("gallery.css");
 
 :root {
-  --bg-color: oklch(0.7 0.07 229);
-  --bg-alt: oklch(0.9 0.04 229);
+    --bg-color: oklch(0.7 0.07 229);
+    --bg-alt: oklch(0.9 0.04 229);
 
-  --border: oklch(0.7 0.05 229);
+    --border: oklch(0.7 0.05 229);
 
-  --text: oklch(0.2 0.07 256.65);
-  --text-muted: oklch(0.5 0.02 233);
-  --text-alt: oklch(0.93 0.02 229);
+    --text: oklch(0.2 0.07 256.65);
+    --text-muted: oklch(0.5 0.02 233);
+    --text-alt: oklch(0.93 0.02 229);
 }
 
 .col1,
 .col2,
 .col3 {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.col1 {
+    position: relative;
 }
 
 .col2 .row2 {
-  display: flex;
-  gap: 12px;
+    display: flex;
+    gap: 4px;
 }
 
 .col2 .under-cunstruction {
-  display: grid;
-  justify-items: center;
-  text-align: center;
-  align-items: center;
-  height: 100%;
+    display: grid;
+    justify-items: center;
+    text-align: center;
+    align-items: center;
+    height: 100%;
 }
 
 .col3 {
-  display: grid;
-  gap: 12px;
+    display: grid;
+    gap: 12px;
 }
