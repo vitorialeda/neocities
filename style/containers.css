@@ -71,6 +71,7 @@
 }
 
 .welcome-text {
+    grid-area: 1 / 1 / 2 / 4;
     position: relative;
     font-size: 20px;
     color: var(--text-muted);
@@ -103,4 +104,52 @@
     position: absolute;
     bottom: -5px;
     right: -70px;
+}
+
+.center-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.col1 .deco {
+    top: 70px;
+    left: -90px;
+    height: 300px;
+}
+
+.my-buttons {
+    text-align: center;
+}
+.my-buttons p {
+    text-align: start;
+}
+
+.container2 {
+    border: thick double var(--text-muted);
+    /*padding: 6px;*/
+    border-radius: 8px;
+}
+
+.cool-sites {
+    width: 370px;
+}
+
+.cool-sites h3 {
+    font-family: "Jersey 25";
+    border-bottom: 4px double;
+    margin-bottom: 8px;
+    padding: 4px;
+}
+
+.cool-sites .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    flex-wrap: wrap;
+}
+
+.at-the-moment {
+    padding: 6px;
 }
