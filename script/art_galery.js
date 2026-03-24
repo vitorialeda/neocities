@@ -1,5 +1,10 @@
 const galleryData = [
   {
+    src: "https://files.malune.net/f/aaeri/22032025.jpg",
+    date: "22/03/2026",
+    detail: "JOLYYYYNE",
+  },
+  {
     src: "https://file.garden/aZzM6RSvfEnxBY-o/Art/20251211.jpg",
     date: "11/12/2025",
     detail:
@@ -19,6 +24,11 @@ const galleryData = [
     src: "https://file.garden/aZzM6RSvfEnxBY-o/Art/20241210.png",
     date: "10/12/2024",
     detail: "",
+  },
+  {
+    src: "https://file.garden/aZzM6RSvfEnxBY-o/Art/20240630.png",
+    date: "30/06/2024",
+    detail: "Mizuho de sonny boy",
   },
   {
     src: "https://file.garden/aZzM6RSvfEnxBY-o/Art/20240100.jpg",
