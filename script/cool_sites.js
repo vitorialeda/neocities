@@ -107,6 +107,12 @@ const cool_sites = [
     alt: "magspace",
     title: "Magspace",
   },
+  {
+    href: "https://kellerhenrique.neocities.org/",
+    src: "https://file.garden/aZzM6RSvfEnxBY-o/Buttons/sitedokeller.gif",
+    alt: "keller",
+    title: "Keller",
+  },
 ];
 
 const buttons_div = document.getElementById("buttons");
