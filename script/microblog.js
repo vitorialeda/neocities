@@ -27,7 +27,7 @@ const blogPosts = [
 function renderPostHeader(post) {
   return `
         <div class="post-header">
-            <img class="post-avatar" src="https://i.pinimg.com/736x/a0/25/71/a02571f105a4b2b20368ebfc4b284cd7.jpg" alt="avatar" />
+            <img class="post-avatar" src="https://i.pinimg.com/736x/bb/d1/4c/bbd14c259e5feaed4f81afa4e539563b.jpg" alt="avatar" />
             <div class="post-meta">
                 <span class="post-username">aaeri</span>
                 <span class="post-date">${post.date}</span>

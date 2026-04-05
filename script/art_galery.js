@@ -1,6 +1,6 @@
 const galleryData = [
   {
-    src: "https://files.malune.net/f/aaeri/22032025.jpg",
+    src: "https://files.malune.net/f/aaeri/desenhos/22032025.jpg",
     date: "22/03/2026",
     detail: "JOLYYYYNE",
   },
@@ -145,7 +145,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     div.innerHTML = `
       <img src="${item.src}" alt="Desenho" />
-      <div class="art-desc">${item.date}</div>
     `;
 
     grid.appendChild(div);
