@@ -1,5 +1,20 @@
 const galleryData = [
   {
+    src: "https://files.malune.net/f/aaeri/desenhos/20260401.jpg",
+    date: "30/03/2026",
+    detail: "redraw",
+  },
+  {
+    src: "https://files.malune.net/f/aaeri/desenhos/20260330.jpg",
+    date: "30/03/2026",
+    detail: "",
+  },
+  {
+    src: "https://files.malune.net/f/aaeri/desenhos/20260328.jpg",
+    date: "28/03/2026",
+    detail: "kagami reimu",
+  },
+  {
     src: "https://files.malune.net/f/aaeri/desenhos/22032025.jpg",
     date: "22/03/2026",
     detail: "JOLYYYYNE",
