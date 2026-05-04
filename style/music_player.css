@@ -2,8 +2,9 @@
 #glenplayer02 {
   width: 100%;
   max-width: 100%;
-  overflow: hidden;
+  overflow: visible;
   box-sizing: border-box;
+  position: relative;
 }
 
 div.ex2 {
@@ -46,6 +47,11 @@ div.ex2 {
   opacity: 1;
 }
 
+.playlist-toggle-btn {
+  font-size: 10px;
+  margin-left: 2px;
+}
+
 .playy,
 .pausee {
   color: #000;
@@ -78,4 +84,82 @@ div.ex2 {
   margin-left: 4px;
   white-space: nowrap;
   flex-shrink: 0;
+}
+
+.playlist-modal {
+  position: absolute;
+  top: 0;
+  left: calc(100% + 8px);
+  width: 280px;
+  max-width: min(280px, calc(100vw - 24px));
+  display: none;
+  z-index: 20;
+}
+
+.playlist-modal.is-open {
+  display: block;
+}
+
+.playlist-modal-content {
+  border: 3px double #000;
+  background: rgba(255, 255, 255, 0.92);
+  padding: 6px;
+  box-sizing: border-box;
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+.playlist-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 6px;
+  font-family: courier new;
+  font-size: 10px;
+  color: #222;
+}
+
+.playlist-close-btn {
+  border: 1px solid #000;
+  background: #fff;
+  color: #000;
+  font-family: courier new;
+  font-size: 10px;
+  line-height: 1;
+  padding: 1px 4px;
+  cursor: pointer;
+}
+
+.playlist-items {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  max-height: 170px;
+  overflow-y: auto;
+}
+
+.playlist-item {
+  width: 100%;
+  border: 1px solid #000;
+  background: rgba(255, 255, 255, 0.9);
+  color: #222;
+  font-family: courier new;
+  font-size: 9px;
+  text-align: left;
+  padding: 4px 6px;
+  cursor: pointer;
+}
+
+.playlist-item:hover,
+.playlist-item.is-active {
+  background: #dff2e2;
+}
+
+@media (max-width: 900px) {
+  .playlist-modal {
+    top: calc(100% + 6px);
+    left: 0;
+    width: min(280px, 100%);
+    max-width: 100%;
+  }
 }
