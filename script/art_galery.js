@@ -15,9 +15,14 @@ const galleryData = [
     detail: "kagami reimu",
   },
   {
-    src: "https://files.malune.net/f/aaeri/desenhos/22032025.jpg",
+    src: "https://files.malune.net/f/aaeri/desenhos/20260322.jpg",
     date: "22/03/2026",
     detail: "JOLYYYYNE",
+  },
+  {
+    src: "https://files.malune.net/f/aaeri/desenhos/20260103.jpeg",
+    date: "03/01/2026",
+    detail: "konatanatanata",
   },
   {
     src: "https://file.garden/aZzM6RSvfEnxBY-o/Art/20251211.jpg",
