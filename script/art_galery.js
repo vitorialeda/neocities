@@ -1,5 +1,15 @@
 const galleryData = [
   {
+    src: "https://files.malune.net/f/aaeri/desenhos/20260520.jpg",
+    date: "20/05/2026",
+    detail: "redraw de um desenho da lune",
+  },
+  {
+    src: "https://files.malune.net/f/aaeri/desenhos/20260507.jpg",
+    date: "07/05/2026",
+    detail: "",
+  },
+  {
     src: "https://files.malune.net/f/aaeri/desenhos/20260401.jpg",
     date: "30/03/2026",
     detail: "redraw",
@@ -160,6 +170,7 @@ document.addEventListener("DOMContentLoaded", () => {
   galleryData.forEach((item) => {
     const div = document.createElement("div");
     div.className = "gallery-item";
+    div.setAttribute("data-date", item.date);
     div.setAttribute("data-detail", item.detail);
     div.onclick = () => openLightbox(div);
 
@@ -174,13 +185,13 @@ document.addEventListener("DOMContentLoaded", () => {
 function openLightbox(item) {
   const overlay = document.querySelector(".lightbox-overlay");
   const img = item.querySelector("img");
-  const desc = item.querySelector(".art-desc");
+  const date = item.getAttribute("data-date") || "";
   const detail = item.getAttribute("data-detail") || "";
 
   overlay.querySelector("img").src = img.src;
-  overlay.querySelector(".lightbox-desc").textContent = desc
-    ? desc.textContent
-    : "";
+  const dateEl = overlay.querySelector(".lightbox-desc");
+  dateEl.textContent = date;
+  dateEl.style.display = date ? "block" : "none";
 
   const detailEl = overlay.querySelector(".lightbox-detail");
   detailEl.textContent = detail;

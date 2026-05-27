@@ -42,6 +42,11 @@ div.ex2 {
   opacity: 1;
 }
 
+.music-btn.is-active {
+  opacity: 1;
+  color: #2d6a4f;
+}
+
 .music-btn.play-pause-btn {
   font-size: 11px;
   opacity: 1;
