@@ -108,11 +108,13 @@ const MusicPlayer = (() => {
 
   let currentIndex = 0;
   let isPlaying = false;
+  let isShuffleOn = false;
   let audio = null;
   let isPlaylistOpen = false;
 
   let playBtn,
     pauseBtn,
+    shuffleBtn,
     labelText,
     trackInfo,
     playerRoot,
@@ -124,6 +126,7 @@ const MusicPlayer = (() => {
     audio = document.getElementById("tune");
     playBtn = document.querySelector(".playy");
     pauseBtn = document.querySelector(".pausee");
+    shuffleBtn = document.querySelector(".shuffle-btn");
     labelText = document.querySelector(".labeltext");
     trackInfo = document.querySelector(".track-info");
     playlistModal = document.querySelector(".playlist-modal");
@@ -154,6 +157,7 @@ const MusicPlayer = (() => {
     renderPlaylist();
     loadTrack(currentIndex);
     updateControls();
+    updateShuffleButton();
   }
 
   function loadTrack(index) {
@@ -195,7 +199,9 @@ const MusicPlayer = (() => {
 
   function next() {
     if (playlist.length <= 1) return;
-    const nextIndex = (currentIndex + 1) % playlist.length;
+    const nextIndex = isShuffleOn
+      ? getRandomTrackIndex()
+      : (currentIndex + 1) % playlist.length;
     loadTrack(nextIndex);
     if (isPlaying) audio.play();
   }
@@ -208,6 +214,16 @@ const MusicPlayer = (() => {
     const prevIndex = (currentIndex - 1 + playlist.length) % playlist.length;
     loadTrack(prevIndex);
     if (isPlaying) audio.play();
+  }
+
+  function getRandomTrackIndex() {
+    if (playlist.length <= 1) return currentIndex;
+
+    let randomIndex = currentIndex;
+    while (randomIndex === currentIndex) {
+      randomIndex = Math.floor(Math.random() * playlist.length);
+    }
+    return randomIndex;
   }
 
   function renderPlaylist() {
@@ -247,6 +263,17 @@ const MusicPlayer = (() => {
     updateControls();
   }
 
+  function toggleShuffle() {
+    isShuffleOn = !isShuffleOn;
+    updateShuffleButton();
+  }
+
+  function updateShuffleButton() {
+    if (!shuffleBtn) return;
+    shuffleBtn.classList.toggle("is-active", isShuffleOn);
+    shuffleBtn.setAttribute("aria-pressed", String(isShuffleOn));
+  }
+
   function togglePlaylist() {
     if (!playlistModal) return;
     isPlaylistOpen = !isPlaylistOpen;
@@ -283,6 +310,7 @@ const MusicPlayer = (() => {
   return {
     closePlaylist,
     togglePlay,
+    toggleShuffle,
     togglePlaylist,
     next,
     prev,
