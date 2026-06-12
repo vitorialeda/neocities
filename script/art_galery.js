@@ -1,5 +1,10 @@
 const galleryData = [
   {
+    src: "https://files.malune.net/f/aaeri/desenhos/20260612.jpg",
+    date: "12/06/2026",
+    detail: "pintano redraw de um desenho da lune",
+  },
+  {
     src: "https://files.malune.net/f/aaeri/desenhos/20260520.jpg",
     date: "20/05/2026",
     detail: "redraw de um desenho da lune",
