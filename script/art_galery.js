@@ -1,5 +1,10 @@
 const galleryData = [
   {
+    src: "https://files.malune.net/f/aaeri/desenhos/20260628.jpg",
+    date: "28/06/2026",
+    detail: "admito era uma desculpa p pintar sovaqs",
+  },
+  {
     src: "https://files.malune.net/f/aaeri/desenhos/20260612.jpg",
     date: "12/06/2026",
     detail: "pintano redraw de um desenho da lune",

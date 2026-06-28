@@ -289,15 +289,23 @@
       </div>
 
       <div class="col3">
-        <div class="sub-container microblog">
-          <h3>Microblog</h3>
-          <iframe
-            src="https://lunebox.malune.net/widget/aaeri?font-family=monospace&color=%23001534&hideUsername=1&lang=pt&marquee=1"
-            frameborder="0"
-            width="100%"
-            title="LuneBox Status"
-          ></iframe>
+        <div class="sub-container calendar-container">
+          <h3>Calendário</h3>
+          <div class="calendar">
+            <div class="calendar-header">
+              <button onclick="changeMonth(-1)">◄</button>
+              <span id="calendar-month-year"></span>
+              <button onclick="changeMonth(1)">►</button>
+            </div>
+            <div class="calendar-weekdays">
+              <span>Dom</span><span>Seg</span><span>Ter</span><span>Qua</span
+              ><span>Qui</span><span>Sex</span><span>Sáb</span>
+            </div>
+            <div class="calendar-days" id="calendar-days"></div>
+          </div>
         </div>
+
+        <!-- Buttons -->
         <div>
           <a href="https://lunebox.malune.net/"
             ><img
@@ -311,6 +319,7 @@
           /></a>
         </div>
 
+        <!-- Player -->
         <div id="glenplayer02">
           <div class="ex2">
             <div class="music-controls">
@@ -384,6 +393,7 @@
           <!--end music player-->
         </div>
 
+        <!-- Chat -->
         <div class="sub-container">
           <h3>Chat</h3>
           <iframe
@@ -406,22 +416,6 @@
           style="object-fit: cover; border-radius: 8px"
           alt=""
         />
-
-        <div class="sub-container calendar-container">
-          <h3>Calendário</h3>
-          <div class="calendar">
-            <div class="calendar-header">
-              <button onclick="changeMonth(-1)">◄</button>
-              <span id="calendar-month-year"></span>
-              <button onclick="changeMonth(1)">►</button>
-            </div>
-            <div class="calendar-weekdays">
-              <span>Dom</span><span>Seg</span><span>Ter</span><span>Qua</span
-              ><span>Qui</span><span>Sex</span><span>Sáb</span>
-            </div>
-            <div class="calendar-days" id="calendar-days"></div>
-          </div>
-        </div>
       </div>
     </div>
 
